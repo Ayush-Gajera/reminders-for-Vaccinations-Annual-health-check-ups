@@ -1,0 +1,374 @@
+/* Navigation Styles */
+.navbar {
+    background-color: rgb(79 70 229);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav links */
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.brand {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: auto; /* Puts the logo to the right */
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    justify-content: center; /* Center align links */
+    flex-grow: 1; /* Allows the links to take up remaining space */
+    justify-content: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f0f2f5;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid white;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f0f2f5;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid white;
+}
+
+/* Adjust container to account for fixed navbar */
+.container {
+    margin-top: 80px;
+    padding: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Enhanced Reminder Card Styles */
+.reminder-section {
+    background: linear-gradient(145deg, #ffffff, #f0f2f5);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.reminder-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border-left: 4px solid #3498db;
+    transition: all 0.3s ease;
+}
+
+.reminder-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.reminder-card h3 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.remind-btn {
+    background: linear-gradient(145deg, #3498db, #2980b9);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.remind-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    position:relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Adjust main content for footer */
+main {
+    margin-bottom: 80px;
+}
+
+/* Modal Enhancements */
+/* Modal Styling */
+.modal-content {
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+    max-width: 500px;
+    margin: auto;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Input and Select Box Styling */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    background: #f9f9f9;
+    border: 2px solid #e0e0e0;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #3498db;
+    outline: none;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+}
+
+/* Submit Button Styling */
+.submit-btn {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    font-size: 1.1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.submit-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #2a85d6, #2068a4);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Close Button */
+.close {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    cursor: pointer;
+    float: right;
+    transition: color 0.3s ease-in-out;
+}
+.close:hover {
+    color: #3498db;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .brand {
+        font-size: 1.2rem;
+    }
+    
+    .container {
+        padding: 10px;
+    }
+}
+/* Reminder Section Styles */
+.reminder-section {
+    background: linear-gradient(145deg, #ffffff, #f0f2f5);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.reminder-section h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Reminder Card Styles */
+.reminder-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid #3498db;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.reminder-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.reminder-card h3 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.reminder-card p {
+    color: #7f8c8d;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.remind-btn {
+    background: linear-gradient(145deg, #3498db, #2980b9);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    font-weight: bold;
+}
+
+.remind-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Vaccination Reminders */
+.vaccine-reminder {
+    background: #f5fbff;
+    border: 1px solid #3498db;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.vaccine-reminder h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2980b9;
+    margin-bottom: 10px;
+}
+
+.vaccine-reminder p {
+    color: #7f8c8d;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.vaccine-reminder .remind-btn {
+    background: linear-gradient(145deg, #3498db, #2980b9);
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+    padding: 12px 24px;
+}
+
+.vaccine-reminder .remind-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Annual Health Check-ups */
+.health-checkup {
+    background: linear-gradient(145deg, #fff1e6, #fbe1e6);
+    border: 1px solid #e67e22;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.health-checkup h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+
+.health-checkup p {
+    color: #7f8c8d;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.health-checkup .remind-btn {
+    background: linear-gradient(145deg, #e67e22, #f39c12);
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+    padding: 12px 24px;
+}
+
+.health-checkup .remind-btn:hover {
+    transform: scale(1.05);
+}

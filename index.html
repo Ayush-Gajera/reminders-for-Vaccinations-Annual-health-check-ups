@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Reminder System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="brand">Vitality AI</div>
+        <div class="nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="#">Services</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <header>
+            <h1>Health Reminder System</h1>
+        </header>
+        
+        <div class="add-reminder">
+            <button id="addNewBtn" class="add-btn">Add New Reminder</button>
+        </div>
+
+        <div id="reminderForm" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Add New Reminder</h2>
+                <form id="newReminderForm">
+                    <div class="form-group">
+                        <label for="reminderTitle">Title:</label>
+                        <input type="text" id="reminderTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reminderType">Type:</label>
+                        <select id="reminderType" required>
+                            <option value="vaccination">Vaccination</option>
+                            <option value="checkup">Health Check-up</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="reminderDate">Due Date:</label>
+                        <input type="date" id="reminderDate" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Add Reminder</button>
+                </form>
+            </div>
+        </div>
+
+        <main id="remindersContainer">
+            <section class="reminder-section" id="vaccinationSection">
+                <h2>Vaccination Reminders</h2>
+                <div class="vaccine-reminder">
+                    <h3>COVID-19 Vaccine</h3>
+                    <p>Get your next dose of the COVID-19 vaccine.</p>
+                    <button class="remind-btn">Set Reminder</button>
+                </div>
+                <div class="vaccine-reminder">
+                    <h3>Flu Vaccine</h3>
+                    <p>Flu season is here. Don't forget your annual flu shot.</p>
+                    <button class="remind-btn">Set Reminder</button>
+                </div>
+            </section>
+
+            <section class="reminder-section" id="checkupSection">
+                <h2>Annual Health Check-ups</h2>
+                <div class="health-checkup">
+                    <h3>General Health Check-up</h3>
+                    <p>Don't miss your yearly check-up for better health!</p>
+                    <button class="remind-btn">Set Reminder</button>
+                </div>
+                <div class="health-checkup">
+                    <h3>Dental Check-up</h3>
+                    <p>Schedule your annual dental check-up to keep your smile bright.</p>
+                    <button class="remind-btn">Set Reminder</button>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <footer class="footer">
+        <p>© 2025 Vitality AI. All rights reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
